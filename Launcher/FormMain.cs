@@ -38,7 +38,7 @@ namespace Launcher
                 textBox1.Text = player;
             }
             comboBox1.SelectedIndex = 2;
-            comboBox2.SelectedIndex = 1;
+            comboBox2.SelectedIndex = 8;
             comboBox3.SelectedIndex = 8;
             comboBox4.SelectedIndex = 0;
             ai.AddRange(new List<List<ComboBox>>() { new List<ComboBox>() { comboBox5, comboBox6, comboBox7, comboBox8, comboBox9 }, new List<ComboBox>() { comboBox10, comboBox11, comboBox12, comboBox13, comboBox14 }, new List<ComboBox>() { comboBox15, comboBox16, comboBox17, comboBox18, comboBox19 }, new List<ComboBox>() { comboBox20, comboBox21, comboBox22, comboBox23, comboBox24 }, new List<ComboBox>() { comboBox25, comboBox26, comboBox27, comboBox28, comboBox29 }, new List<ComboBox>() { comboBox30, comboBox31, comboBox32, comboBox33, comboBox34 }, new List<ComboBox>() { comboBox35, comboBox36, comboBox37, comboBox38, comboBox39 } });
@@ -90,6 +90,7 @@ namespace Launcher
             if (listView1.SelectedItems.Count > 0)
             {
                 Random random = new Random();
+                int side = comboBox1.SelectedIndex == 2 ? random.Next(2) : comboBox1.SelectedIndex;
                 List<string> cacheFile = new List<string>()
                 {
                     "[Settings]",
@@ -102,10 +103,10 @@ namespace Launcher
                     "Bases=" + (checkBox1.Checked ? "yes" : "no"),
                     "BridgeDestroy=" + (checkBox4.Checked ? "yes" : "no"),
                     "FogOfWar=" + (checkBox3.Checked ? "yes" : "no"),
-                    "Side=" + (comboBox1.SelectedIndex == 2 ? random.Next(2) : comboBox1.SelectedIndex).ToString(),
+                    "Side=" + side.ToString(),
                     "Scenario=spawnmap.ini",
                     "GameSpeed=" + numericUpDown4.Value.ToString(),
-                    "Color=" + (comboBox2.SelectedIndex == 8 ? random.Next(8) : comboBox2.SelectedIndex).ToString(),
+                    "Color=" + (comboBox2.SelectedIndex == 8 ? side == 0 ? 0 : 1 : comboBox2.SelectedIndex).ToString(),
                     "Credits=" + numericUpDown2.Value.ToString(),
                     "TechLevel=" + numericUpDown3.Value.ToString(),
                     "UnitCount=" + numericUpDown1.Value.ToString()
