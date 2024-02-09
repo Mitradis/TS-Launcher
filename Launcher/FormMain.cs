@@ -106,7 +106,7 @@ namespace Launcher
                     "Side=" + side.ToString(),
                     "Scenario=spawnmap.ini",
                     "GameSpeed=" + numericUpDown4.Value.ToString(),
-                    "Color=" + (comboBox2.SelectedIndex == 8 ? side == 0 ? 0 : 1 : comboBox2.SelectedIndex).ToString(),
+                    "Color=" + (comboBox2.SelectedIndex == 8 ? comboBox1.SelectedIndex == 3 ? 7 : side == 0 ? 0 : 1 : comboBox2.SelectedIndex).ToString(),
                     "Credits=" + numericUpDown2.Value.ToString(),
                     "TechLevel=" + numericUpDown3.Value.ToString(),
                     "UnitCount=" + numericUpDown1.Value.ToString()
@@ -116,7 +116,7 @@ namespace Launcher
                 List<string> countries = new List<string>() { "", "[HouseCountries]" };
                 List<string> colors = new List<string>() { "", "[HouseColors]" };
                 List<string> locations = new List<string>() { "", "[SpawnLocations]" };
-                if (comboBox3.SelectedIndex != 8)
+                if (comboBox1.SelectedIndex != 3 && comboBox3.SelectedIndex != 8)
                 {
                     locations.Add("Multi1=" + comboBox3.SelectedIndex.ToString());
                 }
@@ -139,7 +139,7 @@ namespace Launcher
                         {
                             locations.Add("Multi" + (aicount + 1).ToString() + "=" + ai[i][3].SelectedIndex.ToString());
                         }
-                        if (comboBox4.SelectedIndex < 4 && comboBox4.SelectedIndex == ai[i][4].SelectedIndex)
+                        if (comboBox1.SelectedIndex != 3 && comboBox4.SelectedIndex < 4 && comboBox4.SelectedIndex == ai[i][4].SelectedIndex)
                         {
                             addToAlliances(alliances, 0, i + 1);
                         }
