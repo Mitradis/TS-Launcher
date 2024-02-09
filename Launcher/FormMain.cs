@@ -90,7 +90,7 @@ namespace Launcher
             if (listView1.SelectedItems.Count > 0)
             {
                 Random random = new Random();
-                int side = comboBox1.SelectedIndex == 2 ? random.Next(2) : comboBox1.SelectedIndex;
+                int side = comboBox1.SelectedIndex == 3 ? 0 : comboBox1.SelectedIndex == 2 ? random.Next(2) : comboBox1.SelectedIndex;
                 List<string> cacheFile = new List<string>()
                 {
                     "[Settings]",
