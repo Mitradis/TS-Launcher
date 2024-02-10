@@ -914,7 +914,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown2.Location = new System.Drawing.Point(550, 301);
+            this.numericUpDown2.Location = new System.Drawing.Point(558, 301);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -926,7 +926,7 @@
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(72, 25);
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 25);
             this.numericUpDown2.TabIndex = 50;
             this.numericUpDown2.Value = new decimal(new int[] {
             10000,
@@ -937,7 +937,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(483, 301);
+            this.label2.Location = new System.Drawing.Point(491, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 0;

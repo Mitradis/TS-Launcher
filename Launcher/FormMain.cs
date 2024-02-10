@@ -105,7 +105,7 @@ namespace Launcher
                     "FogOfWar=" + (checkBox3.Checked ? "yes" : "no"),
                     "Side=" + side.ToString(),
                     "Scenario=spawnmap.ini",
-                    "GameSpeed=" + numericUpDown4.Value.ToString(),
+                    "GameSpeed=" + (numericUpDown4.Maximum - numericUpDown4.Value).ToString(),
                     "Color=" + (comboBox2.SelectedIndex == 8 ? comboBox1.SelectedIndex == 3 ? 7 : side == 0 ? 0 : 1 : comboBox2.SelectedIndex).ToString(),
                     "Credits=" + numericUpDown2.Value.ToString(),
                     "TechLevel=" + numericUpDown3.Value.ToString(),
@@ -383,7 +383,7 @@ namespace Launcher
             {
                 if (!find)
                 {
-                    cacheFile.Insert(index + 1, Environment.NewLine + "[" + section + "]" + Environment.NewLine + key + "=" + value);
+                    cacheFile.Insert(cacheFile.Count > 0 ? index + 1 : 0, (cacheFile.Count > 0 ? Environment.NewLine : "") + "[" + section + "]" + Environment.NewLine + key + "=" + value);
                 }
                 else if (!success)
                 {
