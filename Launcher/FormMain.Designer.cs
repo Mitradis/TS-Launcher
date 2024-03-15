@@ -5,6 +5,7 @@
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -79,7 +80,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -141,7 +142,8 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -150,15 +152,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button2
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(723, 281);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 40);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Start Skirmish";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(723, 281);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 40);
+            this.button2.TabIndex = 54;
+            this.button2.Text = "Start Skirmish";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -894,7 +896,7 @@
             0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(32, 25);
-            this.numericUpDown4.TabIndex = 52;
+            this.numericUpDown4.TabIndex = 53;
             this.numericUpDown4.Value = new decimal(new int[] {
             3,
             0,
@@ -927,7 +929,7 @@
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(64, 25);
-            this.numericUpDown2.TabIndex = 50;
+            this.numericUpDown2.TabIndex = 51;
             this.numericUpDown2.Value = new decimal(new int[] {
             10000,
             0,
@@ -960,7 +962,7 @@
             0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(40, 25);
-            this.numericUpDown3.TabIndex = 51;
+            this.numericUpDown3.TabIndex = 52;
             this.numericUpDown3.Value = new decimal(new int[] {
             10,
             0,
@@ -993,7 +995,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(40, 25);
-            this.numericUpDown1.TabIndex = 49;
+            this.numericUpDown1.TabIndex = 50;
             this.numericUpDown1.Value = new decimal(new int[] {
             10,
             0,
@@ -1019,7 +1021,7 @@
             this.checkBox1.Location = new System.Drawing.Point(132, 274);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(77, 22);
-            this.checkBox1.TabIndex = 41;
+            this.checkBox1.TabIndex = 42;
             this.checkBox1.Text = "Bases:";
             // 
             // checkBox2
@@ -1031,7 +1033,7 @@
             this.checkBox2.Location = new System.Drawing.Point(130, 302);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(79, 22);
-            this.checkBox2.TabIndex = 42;
+            this.checkBox2.TabIndex = 43;
             this.checkBox2.Text = "Crates:";
             // 
             // checkBox3
@@ -1041,7 +1043,7 @@
             this.checkBox3.Location = new System.Drawing.Point(98, 330);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(111, 22);
-            this.checkBox3.TabIndex = 43;
+            this.checkBox3.TabIndex = 44;
             this.checkBox3.Text = "Fog Of War:";
             // 
             // checkBox4
@@ -1053,7 +1055,7 @@
             this.checkBox4.Location = new System.Drawing.Point(50, 358);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(159, 22);
-            this.checkBox4.TabIndex = 44;
+            this.checkBox4.TabIndex = 45;
             this.checkBox4.Text = "Bridge Destroyable:";
             // 
             // checkBox8
@@ -1065,7 +1067,7 @@
             this.checkBox8.Location = new System.Drawing.Point(257, 358);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(146, 22);
-            this.checkBox8.TabIndex = 48;
+            this.checkBox8.TabIndex = 49;
             this.checkBox8.Text = "Firestorm Game:";
             // 
             // checkBox5
@@ -1075,7 +1077,7 @@
             this.checkBox5.Location = new System.Drawing.Point(238, 274);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(165, 22);
-            this.checkBox5.TabIndex = 45;
+            this.checkBox5.TabIndex = 46;
             this.checkBox5.Text = "Re-Deplayable MCV:";
             // 
             // checkBox6
@@ -1085,7 +1087,7 @@
             this.checkBox6.Location = new System.Drawing.Point(289, 302);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(114, 22);
-            this.checkBox6.TabIndex = 46;
+            this.checkBox6.TabIndex = 47;
             this.checkBox6.Text = "Short Game:";
             // 
             // checkBox7
@@ -1095,22 +1097,33 @@
             this.checkBox7.Location = new System.Drawing.Point(277, 330);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(126, 22);
-            this.checkBox7.TabIndex = 47;
+            this.checkBox7.TabIndex = 48;
             this.checkBox7.Text = "Multi Engineer:";
             // 
-            // button2
+            // button3
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(723, 334);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 40);
-            this.button2.TabIndex = 54;
-            this.button2.Text = "Start Game";
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(723, 334);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(135, 40);
+            this.button3.TabIndex = 55;
+            this.button3.Text = "Start Game";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(14, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 27);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "4 vs 4";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMain
             // 
             this.ClientSize = new System.Drawing.Size(930, 388);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.checkBox8);
             this.Controls.Add(this.checkBox2);
@@ -1169,8 +1182,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

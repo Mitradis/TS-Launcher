@@ -14,6 +14,7 @@ namespace Launcher
         string sun = Path.Combine(path, "SUN.INI");
         List<string> number = new List<string>() { "One", "Two", "Three", "Four", "Five", "Six", "Seven" };
         List<List<ComboBox>> ai = new List<List<ComboBox>>();
+        int mode = 4;
         int max = 0;
 
         public FormMain()
@@ -63,12 +64,13 @@ namespace Launcher
                 {
                     pictureBox1.BackgroundImage = ExtractThumb(lineReadWrite(listView1.SelectedItems[0].ToolTipText, "PreviewPack", "", true), new int[] { Int32.Parse(size[0]), Int32.Parse(size[1]), Int32.Parse(size[2]), Int32.Parse(size[3]) });
                     max = Int32.Parse(listView1.SelectedItems[0].SubItems[1].Text);
-                    button1.Enabled = true;
+                    max = mode == 1 && max > 2 ? 2 : mode == 2 && max > 4 ? 4 : mode == 3 && max > 6 ? 6 : max;
+                    button2.Enabled = true;
                 }
                 catch
                 {
                     max = 0;
-                    button1.Enabled = false;
+                    button2.Enabled = false;
                     pictureBox1.BackgroundImage = null;
                     MessageBox.Show("Failed to read file: " + listView1.SelectedItems[0].ToolTipText);
                 }
@@ -86,6 +88,13 @@ namespace Launcher
         }
 
         void button1_Click(object sender, EventArgs e)
+        {
+            mode = mode < 4 ? mode + 1 : 1;
+            button1.Text = mode == 1 ? "1 vs 1" : mode == 2 ? "2 vs 2" : mode == 3 ? "3 vs 3" : "4 vs 4";
+            listView1_SelectedIndexChanged(this, new EventArgs());
+        }
+
+        void button2_Click(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
             {
@@ -209,7 +218,7 @@ namespace Launcher
             alliances[two].Add("HouseAlly" + number[alliances[two].Count - 2] + "=" + one);
         }
 
-        void button2_Click(object sender, EventArgs e)
+        void button3_Click(object sender, EventArgs e)
         {
             startGame(Path.Combine(path, "Game.exe"));
         }
@@ -333,7 +342,7 @@ namespace Launcher
                     {
                         find = true;
                     }
-                    else if (find && cacheFile[i].StartsWith("[", StringComparison.OrdinalIgnoreCase))
+                    else if (find && cacheFile[i].StartsWith("["))
                     {
                         if (write)
                         {
